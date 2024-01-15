@@ -4,4 +4,4 @@ Encryption Libraries for Password Transfer in Web-Based Systems on an Unsafe Net
 
 # Architecture
 
-![alt text](img/model.png)
+![alt text](img/architecture.png)
