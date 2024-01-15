@@ -28,7 +28,6 @@ let decrypted = testudo().unform(sec, testudo().getSeed(hashed_password, passwor
 string encrypted = testudo.form(password, hashed_password);
 
 string decrypted = testudo.unform(secret, testudo.getSeed(hashed_password, password));
-
 ```
 
 ## Php
