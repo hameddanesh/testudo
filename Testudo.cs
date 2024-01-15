@@ -13,19 +13,19 @@ using System;
 using System.Linq;
 using System.Text;
 
-namespace Security.Testudo
+namespace secreturity.Testudo
 {
     public class Testudo
     {
-        public string form(string value, string key)
+        public string form(string value, string valueHash)
         {
-            string seed = getSeed(key, value);
+            string seed = getSeed(valueHash, value);
             return xor(_textToBinary(value), seed);
         }
 
-        public string unform(string sec, string seed)
+        public string unform(string secret, string seed)
         {
-            return _binaryToText(xor(sec, seed));
+            return _binaryToText(xor(secret, seed));
         }
 
         public string _textToBinary(string text)

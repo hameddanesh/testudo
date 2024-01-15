@@ -11,19 +11,19 @@
  *
  */
 
-namespace App\Security;
+namespace App\secreturity;
 
 class Testudo
 {
-    public function form(string $value, string $key)
+    public function form(string $value, string $valueHash)
     {
-        $seed = $this->getSeed($key, $value);
+        $seed = $this->getSeed($valueHash, $value);
         return $this->xor($this->textToBinary($value), $seed);
     }
 
-    public function unform(string $secret, string $seed)
+    public function unform(string $secretret, string $seed)
     {
-        return  $this->binaryToText($this->xor($secret, $seed));
+        return  $this->binaryToText($this->xor($secretret, $seed));
     }
 
     public function textToBinary(string $text)
