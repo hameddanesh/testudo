@@ -14,6 +14,10 @@ Encryption Libraries for Password Transfer in Web-Based Systems on an Unsafe Net
 - Pass recieved value and hashed password stored on server-side to Testudo class instance
 - Use restroed value to Authenticate
 
+# Tips
+
+- It is better to concatenate parts of IP or machine name to key to make it client dependent.
+
 ## Javascript
 
 ```js
