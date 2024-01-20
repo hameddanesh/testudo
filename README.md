@@ -19,7 +19,7 @@ Encryption Libraries for Password Transfer in Web-Based Systems on an Unsafe Net
 ```js
 let encrypted = testudo().form(password, hashed_password)
 
-let decrypted = testudo().unform(sec, testudo().getSeed(hashed_password, password))
+let decrypted = testudo().unform(encrypted, testudo().getSeed(hashed_password, password))
 ```
 
 ## Csharp
@@ -27,7 +27,7 @@ let decrypted = testudo().unform(sec, testudo().getSeed(hashed_password, passwor
 ```csharp
 string encrypted = testudo.form(password, hashed_password);
 
-string decrypted = testudo.unform(secret, testudo.getSeed(hashed_password, password));
+string decrypted = testudo.unform(encrypted, testudo.getSeed(hashed_password, password));
 ```
 
 ## Php
@@ -35,5 +35,13 @@ string decrypted = testudo.unform(secret, testudo.getSeed(hashed_password, passw
 ```php
 $encrypted = $testudo->form($password, $hashed_password);
 
-$decrypted = $testudo->unform($sec, $testudo->getSeed($hashed_password, $password));
+$decrypted = $testudo->unform($encrypted, $testudo->getSeed($hashed_password, $password));
+```
+
+## Python
+
+```python
+encrypted = Testudo().form(password, hashed_password)
+
+decrypted = Testudo().unform(encrypted, Testudo().getSeed(hashed_password, password))
 ```
