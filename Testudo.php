@@ -11,7 +11,7 @@
  *
  */
 
-namespace App\secreturity;
+namespace App\security;
 
 class Testudo
 {
@@ -21,9 +21,9 @@ class Testudo
         return $this->xor($this->textToBinary($value), $seed);
     }
 
-    public function unform(string $secretret, string $seed)
+    public function unform(string $secret, string $seed)
     {
-        return  $this->binaryToText($this->xor($secretret, $seed));
+        return  $this->binaryToText($this->xor($secret, $seed));
     }
 
     public function textToBinary(string $text)
